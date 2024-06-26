@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        arr.push(10);
+        document.write("push", arr);
+
+        arr.pop();
+        document.write('<br/>', "pop", arr);
+
+        arr.shift(2);
+        document.write('<br/>', "shift", arr);
+
+        arr.unshift(1);
+        document.write('<br/>', "unshift", arr);
+
+        arr.splice(2);
+        document.write('<br/>', "splice", arr);
+
+        
+
+        function sortArray(arr1) {
+            return arr1.sort((a, b) => a - b);
+        }
+
+        let arr1 = [64, 34, 25, 12, 22, 11, 90];
+        document.write('<br/>', "Original array:", arr1);
+        document.write('<br/>', "Sorted array:", sortArray(arr1));
+    </script>
+</body>
+
+</html>
