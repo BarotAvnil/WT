@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        input{
+            font-weight: bold;
+            color: azure;
+            background-color: black;
+            border-radius: 30px;
+            
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function appendCharacter(character) {
+            document.getElementById("display").value+=character;
+        }
+
+        function calculate(){
+            try {
+                document.getElementById("display").value=eval(document.getElementById("display").value);
+            } catch (error) {
+                document.getElementById("display").value="Error";
+            }
+        }
+        function clearch(){
+            document.getElementById("display").value=(document.getElementById("display").value).slice(0,-1);
+        }
+        function clearAll(){
+            document.getElementById("display").value="";
+        }
+        
+    </script>
+    <div>
+        <div style="padding: 5px;" class="Disp">
+            <input type="text" id="display" style="width: 30%;">
+            <button onclick="clearch()" style="color: cadetblue; background-color: black; font-weight: bold;">C</button>
+            
+        </div>
+        <div>
+            <button onclick="clearAll()" style="color: cadetblue; background-color: black; font-weight: bold; border-radius: 30px;">CE</button>
+            <input type="button" value="+/-">
+            <input type="button" value="%">
+            <input type="button" value="÷" onclick="appendCharacter('/')">
+        </div>
+        <div style="padding: 5px;">
+            <input type="button" value="7" onclick="appendCharacter('7')">
+            <input type="button" value="8"onclick="appendCharacter('8')">
+            <input type="button" value="9"onclick="appendCharacter('9')">
+            <input type="button" value="*"onclick="appendCharacter('X')">
+        </div>
+        <div style="padding: 5px;">
+            <input type="button" value="4"onclick="appendCharacter('4')">
+            <input type="button" value="5"onclick="appendCharacter('5')">
+            <input type="button" value="6"onclick="appendCharacter('6')">
+            <input type="button" value="-"onclick="appendCharacter('-')">
+        </div>
+        <div style="padding: 5px;">
+            <input type="button" value="1"onclick="appendCharacter('1')">
+            <input type="button" value="2"onclick="appendCharacter('2')">
+            <input type="button" value="3"onclick="appendCharacter('3')">
+            <input type="button" value="+"onclick="appendCharacter('+')">
+        </div>
+        <div style="margin-left: 2px; padding: 5px;">
+            <input type="button" value="0"onclick="appendCharacter('0')" style="width: 14%;">
+            <input type="button" value="."onclick="appendCharacter('.')">
+            <input type="button" value="/"onclick="appendCharacter('/')">
+            <input type="button" value="=" onclick="calculate()" >
+        </div>
+    </div>
+    
+</body>
+</html>
