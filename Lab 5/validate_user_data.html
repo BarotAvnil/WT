@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+        <Label for="username">UserName ::</Label>
+        <input type="text" id="username">
+        <br>
+        <label for="password">Password ::</label>
+        <input type="password" id="password">
+        <br>
+        <label for="repeatPass">Repeat Pass ::</label>
+        <input type="password" name="" id="repeatPass">
+        <br>
+        <label for="age">Age ::</label>
+        <input type="number" name="" id="age">
+        <br>
+        <label for="enrollment">Enrollment ::</label>
+        <input type="number" name="" id="enrollment">
+        <br>
+        <label for="email">Email ::</label>
+        <input type="email" name="" id="email">
+        <br>
+        <button type="button" onclick="validate()">Submit</button>
+
+    <div id="successMsg" style="color: green;"></div>
+    <div id="errorMsg" style="color: red;"></div>
+    <script>
+        function validate() {
+            var username = document.getElementById("username").value;
+            userRegex = /^[a-zA-Z0-9]+([._]?[a-zA-Z0-9]+)*$/;
+
+            var password = document.getElementById("password").value;
+            passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+
+            var repeatPass = document.getElementById("repeatPass").value;
+            repPassRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+
+            var age = document.getElementById("age").value;
+            ageRegex = /^([3-9]|[1-6][0-9])$/;
+
+            var enrollment = document.getElementById("enrollment").value;
+            enrollmentRegex = /^([0-9]\d{11})?$/;
+
+            var email = document.getElementById("email").value;
+            emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-z0-9\-\.]+)\.([a-z]{2,5})$/;
+
+            if (userRegex.test(username)) {
+                document.getElementById("successMsg").innerHTML = "Valid Username";
+                document.getElementById("successMsg").innerHTML = "";
+            }
+            else {
+                document.getElementById("errorMsg").innerHTML = "Invalid Username";
+                alert("Username is not valid");
+            }
+            if (passRegex.test(password)) {
+                document.getElementById("successMsg").innerHTML = "Valid Password";
+                document.getElementById("successMsg").innerHTML = "";
+            }
+            else {
+                document.getElementById("password").innerHTML = "Invalid Password";
+                alert("Password is not valid");
+            }
+            if (password == repeatPass) {
+                document.getElementById("successMsg").innerHTML = "Valid Repeat Password";
+                document.getElementById("successMsg").innerHTML = "";
+            }
+            else {
+                document.getElementById("ErrorMsg").innerHTML = "Invalid Repeat Password";
+                alert("Password is not matching");
+            }
+            if (ageRegex.test(age)) {
+                document.getElementById("successMsg").innerHTML = "Valid Age";
+                document.getElementById("successMsg").innerHTML = "";
+            }
+            else {
+                document.getElementById("errorMsg").innerHTML = "Invalid Age";
+                alert("Age is not valid");
+            }
+            if (enrollmentRegex.test(enrollment)) {
+                document.getElementById("successMsg").innerHTML = "Valid Enrollment";
+                document.getElementById("successMsg").innerHTML = "";
+            }
+            else {
+                document.getElementById("errorMsg").innerHTML = "Invalid Enrollment";
+                alert("Enrollment is not valid");
+            }
+            if (emailRegex.test(email)) {
+                document.getElementById("successMsg").innerHTML = "Valid Email";
+                document.getElementById("successMsg").innerHTML = "";
+            }
+            else {
+                document.getElementById("errorMsg").innerHTML = "Invalid Email";
+                alert("Email is not valid");
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>
