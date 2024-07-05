@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" style="height: 200px; width: 200px; background-color:red;" ></div>
+    <button onclick="setInt()">Change color</button>
+    <button onclick="stopInt()">Stop Interval</button>
+    <script>
+        function ChangeColor() {
+            r = Math.floor(Math.random() * 255);
+            g = Math.floor(Math.random() * 255);
+            b = Math.floor(Math.random() * 255);
+
+            document.getElementById("div1").style.backgroundColor = "rgb("+r+","+g+","+b+")";
+            
+        }
+    function setInt(){
+        a = setInterval(ChangeColor,150);
+    }
+    function stopInt(){
+        clearInterval(a)
+    }
+
+    </script>
+</body>
+</html>

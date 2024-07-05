@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="Single" onclick="SingleClicked()">Single Click</button>
+    <button id="Double" ondblclick="DoubleClicked()">Double Click</button>
+    <div id="over" style="height: 100px; width: 100px; background-color: red;" onmouseover="over()"></div>
+    <br>
+    <div id="out" style="height: 100px; width: 100px; background-color:black;" onmouseout="out()"></div>
+    <br>
+    <div id="" style="height: 100px; width: 100px; background-color: beige;" ondrag="drag()"></div>
+    <div></div>
+    <script>
+        function SingleClicked(){
+            alert("Single Clicked");
+        }
+        function DoubleClicked(){
+            alert("Double Clicked");
+        }
+        function over(){
+            document.getElementById("over").style.backgroundColor = "black";
+        }
+        function out(){
+            document.getElementById("out").style.backgroundColor = "red";
+        }
+        function drag(){
+            document.getElementById("drag").style.backgroundColor = "green";
+        }
+
+    </script>
+</body>
+</html>

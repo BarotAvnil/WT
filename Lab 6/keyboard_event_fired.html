@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="Down">When Pressing Single At a Time...</label>
+    <br>
+    <input type="text" onkeydown="KeyDown()" id="Down">
+    <br>
+    <label for="Up">When Key is Pressed...</label>
+    <br>
+    <input type="text" onkeyup="KeyUp()" id="Up">
+    <script>
+        function KeyDown() {
+            alert("Key Down is Called");
+        }
+        function KeyUp(){
+            alert("Key Up is Called");
+        }
+    </script>
+</body>
+</html>
