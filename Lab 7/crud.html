@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            }
+    </style>
+</head>
+
+<body>
+    
+    <input type="text" id="input">
+    <button onclick="ADDfunc()" id="ADD">ADD</button>
+    <input type="text" name="" id="index" placeholder="Enter Index">
+    <input type="text" name="" id="UPDATE">
+    <button onclick="UPDATEfunc(i)" >UPDATE</button>
+    <div id="result"></div>
+    <script>
+        const arr = [];
+        function ADDfunc() {
+            a = (document.getElementById("input"));
+            arr.push(a.value);
+            a.value = " ";
+            display();
+        }
+        function display() {
+            temp = document.getElementById("result");
+            temp.innerHTML = "<table border = '1'>";
+            for (i = 0; i < arr.length; i++) {
+                temp.innerHTML += "<tr><td>"
+                     + arr[i] + `
+                    </td><td><button onclick="DELETEfunc(${i})" id="DELETE">DELETE</button></td>
+                   
+                    </tr>
+                    <br>`;
+            }
+            temp.innerHTML += "</table>";
+
+        }
+        function DELETEfunc(index) {
+            arr.splice(index, 1)
+            display()
+        }
+        function UPDATEfunc(index) {
+            b=document.getElementById("index").value;
+            a = document.getElementById("UPDATE").value;
+            arr[b]= a;
+            display()
+
+        }
+
+    </script>
+</body>
+
+</html>
