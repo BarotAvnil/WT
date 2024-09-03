@@ -1,8 +1,8 @@
 const fs = require('fs');
 const http = require('http');
 const server = http.createServer((req, res) => {
-    
-    if (req.url == '/home') {
+
+    if (req.url == '/home' || req.url == ' ') {
         fs.readFile('home.html', (err, data) => {
             if (err) {
                 req.end(err);
