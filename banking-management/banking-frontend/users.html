@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Manage Users</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="accounts.html">Accounts</a>
+            <a href="transactions.html">Transactions</a>
+        </nav>
+    </header>
+    <main>
+        <section class="form-container">
+            <h2>Add New User</h2>
+            <form id="userForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="Enter password" required>
+                <button type="submit">Add User</button>
+            </form>
+        </section>
+        <section class="list-container">
+            <h2>User List</h2>
+            <ul id="userList"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Banking Management System</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
