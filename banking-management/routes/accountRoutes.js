@@ -37,7 +37,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Update Account
-router.put('/:id', async (req, res) => {
+router.patch('/:id', async (req, res) => {
     try {
         const account = await Account.findByIdAndUpdate(req.params.id, req.body, { new: true });
         if (!account) {

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Users - Banking System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">Banking System</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="accounts.html">Accounts</a></li>
+                <li class="nav-item"><a class="nav-link" href="transactions.html">Transactions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container mt-5">
+        <h1 class="text-center">Manage Users</h1>
+        <section class="my-4">
+            <h2 class="h3">Add New User</h2>
+            <form id="userForm" class="form-inline">
+                <div class="form-group mb-2 mr-2">
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter name">
+                </div>
+                <div class="form-group mb-2 mr-2">
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter email">
+                </div>
+                <div class="form-group mb-2 mr-2">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter password">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Add User</button>
+            </form>
+        </section>
+
+        <section class="my-4">
+            <h2 class="h3">User List</h2>
+            <ul id="userList" class="list-group"></ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Banking Management System</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

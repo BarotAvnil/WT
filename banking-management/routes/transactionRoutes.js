@@ -65,7 +65,7 @@ router.delete('/:id', async (req, res) => {
 });
 
 //UPdate transaation
-router.put/*patch*/('/:id', async (req, res) => { 
+router.patch('/:id', async (req, res) => { 
     try {
         const transaction = await Transaction.findByIdAndUpdate(req.params.id, req.body, { new: true });
         res.status(200).send(transaction);

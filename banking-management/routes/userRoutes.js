@@ -23,6 +23,21 @@ router.get('/', async (req, res) => {
     }
 });
 
+// Get by ID
+router.get('/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        const user = await User.findById(id);
+        if (!user) {
+            return res.status(404).send({ message: 'User not found' });
+        } else {
+            res.status(200).send(user);
+        }
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
 //Update User
 router.patch('/:id', async (req, res) => {
     try {

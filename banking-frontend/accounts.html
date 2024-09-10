@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Accounts - Banking System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="index.html">Banking System</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="users.html">Users</a></li>
+                <li class="nav-item"><a class="nav-link" href="transactions.html">Transactions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container mt-5">
+        <h1 class="text-center">Manage Accounts</h1>
+        <section class="my-4">
+            <h2 class="h3">Add New Account</h2>
+            <form id="accountForm" class="form-inline">
+                <div class="form-group mb-2 mr-2">
+                    <label for="userId" class="sr-only">User ID</label>
+                    <input type="text" id="userId" class="form-control" placeholder="User ID">
+                </div>
+                <div class="form-group mb-2 mr-2">
+                    <label for="accountNumber" class="sr-only">Account Number</label>
+                    <input type="text" id="accountNumber" class="form-control" placeholder="Account Number">
+                </div>
+                <div class="form-group mb-2 mr-2">
+                    <label for="balance" class="sr-only">Balance</label>
+                    <input type="number" id="balance" class="form-control" placeholder="Balance">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Add Account</button>
+            </form>
+        </section>
+
+        <section class="my-4">
+            <h2 class="h3">Account List</h2>
+            <ul id="accountList" class="list-group"></ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Banking Management System</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
