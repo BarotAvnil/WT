@@ -28,7 +28,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/BarotAvnil/Web-Technology/banking-management-system.git
+git clone https://github.com/BarotAvnil/Web-Technology/tree/main/Banking-Management-System
 cd banking-management-system
 Navigate to the backend directory:
 
