@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-import CRUD from './CRUD';
+import './index.css';
+import App from './App';
+import Footer from './Pages/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <>
-    
-    <CRUD />
-  </>
+    <>  
+        <App />
+        <Footer />
+    </>
 );
